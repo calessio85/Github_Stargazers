@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TestGithub</string>
+    <string name="activity_title">GitHub Stargazers</string>
+
+    <string name="github_owner_hint">owner</string>
+    <string name="github_repo_hint">repository</string>
+    <string name="slash">/</string>
+
+    <string name="error_no_stargazers">Nessun stargazer relativo a questo repository</string>
+    <string name="error_not_found">Repository non trovato</string>
+
+    <string name="button_search">Cerca</string>
+    <string name="button_ok">Ok</string>
+</resources>

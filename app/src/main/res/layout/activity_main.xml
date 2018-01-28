@@ -1,0 +1,67 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/owner"
+            android:layout_height="wrap_content"
+            android:layout_width="0px"
+            android:layout_weight="40"
+            android:hint="@string/github_owner_hint"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:nextFocusForward="@+id/repo"
+            android:textSize="18sp"
+            android:inputType="text" />
+
+        <TextView
+            android:layout_width="0px"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:text="@string/slash"
+            android:textSize="20sp"/>
+
+        <EditText
+            android:id="@+id/repo"
+            android:layout_height="wrap_content"
+            android:layout_width="0px"
+            android:layout_weight="40"
+            android:hint="@string/github_repo_hint"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
+            android:imeOptions="actionGo"
+            android:imeActionLabel="@string/button_search"
+            android:textSize="18sp"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="0px"
+            android:layout_weight="19"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/button_search"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:layout_gravity="end"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/stargazers_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"/>
+
+</LinearLayout>
