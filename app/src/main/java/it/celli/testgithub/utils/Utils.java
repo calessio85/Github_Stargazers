@@ -8,7 +8,14 @@ import it.celli.testgithub.R;
 
 public class Utils {
 
-    public static void showErrorDialog(Context context, String message) {
+    public static String BASE_URL = "https://api.github.com";
+
+    public static void showErrorDialog(Context context, String description, String errorCode) {
+
+        String message = description;
+        if(errorCode != null) {
+            message += " ("+ errorCode +")";
+        }
 
         new AlertDialog.Builder(context)
                 .setIcon(android.R.drawable.ic_dialog_alert)

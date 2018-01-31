@@ -11,4 +11,6 @@
 
     <string name="button_search">Cerca</string>
     <string name="button_ok">Ok</string>
+
+    <string name="dialog_error_connection">Errore durante l\'esecuzione della ricerca richiesta</string>
 </resources>

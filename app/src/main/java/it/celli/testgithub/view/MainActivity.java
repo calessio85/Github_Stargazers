@@ -5,7 +5,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -117,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void loadPage() {
         if(mIsFinished) {
-            Log.e("PIPPO", "IsFinished");
             return;
         }
 
@@ -128,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
                                 if(list.isEmpty()) {
                                     mIsFinished = true;
                                     if(mCurrentPage == 1) {
-                                        Utils.showErrorDialog(this, getString(R.string.error_no_stargazers));
+                                        Utils.showErrorDialog(this, getString(R.string.error_no_stargazers), null);
                                     }
                                 }
                                 else {
@@ -142,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                                     }
                                     mCurrentPage++;
                                 }},
-                            throwable -> Utils.showErrorDialog(this, throwable.getMessage())
+                            throwable -> Utils.showErrorDialog(this, getString(R.string.dialog_error_connection), throwable.getMessage())
 
                 );
 
